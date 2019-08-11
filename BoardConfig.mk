@@ -54,6 +54,7 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 TARGET_KERNEL_VERSION := 4.14
 TARGET_KERNEL_CLANG_VERSION := proton
 KERNEL_TOOLCHAIN_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin/aarch64-linux-gnu-
@@ -61,7 +62,6 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/Image.gz-dtb
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_HEADERS := kernel/xiaomi/laurel_sprout
-TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
 
 # Enable stats logging in LMKD
 TARGET_LMKD_STATS_LOG := true
