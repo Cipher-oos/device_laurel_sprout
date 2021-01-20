@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/octavi_laurel_sprout.mk
+    $(LOCAL_DIR)/potato_laurel_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    octavi_laurel_sprout-user \
-    octavi_laurel_sprout-userdebug \
-    octavi_laurel_sprout-eng
+    potato_laurel_sprout-user \
+    potato_laurel_sprout-userdebug \
+    potato_laurel_sprout-eng
