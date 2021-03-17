@@ -33,7 +33,6 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_laurel_sprout
 PRODUCT_DEVICE := laurel_sprout
-PRODUCT_NAME := nezuko_laurel_sprout
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi A3
 PRODUCT_MANUFACTURER := Xiaomi
