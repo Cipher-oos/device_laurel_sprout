@@ -17,10 +17,10 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Props
 NEZUKO_MAINTAINER := MahmoudSuleiman
-NEZUKO_BUILD_TYPE := UNOFFICIAL
+NEZUKO_BUILD_TYPE := OFFICIAL
 NEZUKO_SUPPORT_URL := https://t.me/nezuko_A3
-PRODUCT_PRODUCT_PROPERTIES += \ro.nezuko.cpu=SD665
-
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.nezuko.cpu=SD665
 # Inherit from custom vendor
 #$(call inherit-product, vendor/MiuiCamera/config.mk)
 
