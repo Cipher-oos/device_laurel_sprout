@@ -16,7 +16,7 @@ $(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Props
-NEZUKO_MAINTAINER := MahmoudSuleiman
+NEZUKO_MAINTAINER := Mahmoud_Suleiman
 NEZUKO_BUILD_TYPE := OFFICIAL
 NEZUKO_SUPPORT_URL := https://t.me/nezuko_A3
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -44,7 +44,6 @@ SKIP_ABI_CHECKS := true
 # FOD Animation
 EXTRA_FOD_ANIMATIONS := true
 
-BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="laurel_sprout-user 10 QKQ1.190910.002 V11.0.15.0.QFQMIXM release-keys" \
