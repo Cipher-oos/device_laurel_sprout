@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
 
 # Inherit some common nezuko stuff.
-WITH_GAPPS := true
+
 $(call inherit-product, vendor/nezuko/config/common_full_phone.mk)
 
 
@@ -21,6 +21,7 @@ $(call inherit-product, vendor/nezuko/config/common_full_phone.mk)
 NEZUKO_MAINTAINER := Mahmoud_Suleiman
 NEZUKO_BUILD_TYPE := OFFICIAL
 NEZUKO_SUPPORT_URL := https://t.me/nezuko_A3
+NEZUKO_DONATE := https://paypal.me/mmsuleiman
 
 PRODUCT_PRODUCT_PROPERTIES += \
   ro.nezuko.cpu=SD665
