@@ -89,6 +89,7 @@
     <string name="contrast">Contrast</string>
     <string name="hue">Hue</string>
     <string name="grayscale">Grayscale Display</string>
+    <string name="kcal_footer">Try turning ON and OFF to preview the effects</string>
 
     <!-- Presets For KCAL -->
     <string name="presets_dialog_title">Select Preset</string>

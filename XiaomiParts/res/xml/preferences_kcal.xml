@@ -97,5 +97,10 @@
             android:key="grayscale"
             android:title="@string/grayscale" />
 
+        <com.android.settingslib.widget.FooterPreference
+            android:key="footer_preference"
+            android:title="@string/kcal_footer"
+            android:selectable="false" />
+
     </PreferenceCategory>
 </PreferenceScreen>
