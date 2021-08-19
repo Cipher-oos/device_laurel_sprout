@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The Evolution-X Project
+# Copyright (C) 2021 The radiant-X Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Evolution-X stuff
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common radiant-X stuff
+$(call inherit-product, vendor/radiant/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -28,8 +28,11 @@ $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := evolution_laurel_sprout
+PRODUCT_NAME := radiant_laurel_sprout
 PRODUCT_MODEL := Mi A3
+
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.nezuko.cpu=SD665
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -37,17 +40,24 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 SKIP_ABI_CHECKS := true
 
 # FOD Animation
-EXTRA_FOD_ANIMATIONS := true
+WITH_FOD_ANIMATIONS := true
 
 # Props
-EVO_MAINTAINER := HemantSachdeva
-EVO_BUILD_TYPE := OFFICIAL
-EVO_SUPPORT_URL := https://t.me/EvolutionXLaurel_Sprout
-EVO_DONATE_URL := https://pages.razorpay.com/HemantSachdevaa
-BUILD_USERNAME := Hemant
-BUILD_HOSTNAME := Evolution-X
+RADIANT_MAINTAINER := Mahmoud_Suleiman
+RADIANT_BUILD_TYPE := OFFICIAL
+RADIANT_SUPPORT_URL := https://t.me/nezuko_A3
+RADIANT_DONATE_URL := https://paypal.me/mmsuleiman
+BUILD_USERNAME := Cipher
+BUILD_HOSTNAME := radiant
 
-WITH_GAPPS := true
+#TARGET_INCLUDE_STOCK_ARCORE  := true
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_GAPPS_ARCH := arm64
+#TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_GAPPS  := false
+
+
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="laurel_sprout-user 10 QKQ1.190910.002 V11.0.15.0.QFQMIXM release-keys" \
+    PRODUCT_NAME="laurel_sprout"
