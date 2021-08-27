@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/radiant_laurel_sprout.mk
+    $(LOCAL_DIR)/potato_laurel_sprout.mk
 
 COMMON_LUNCH_CHOICES := \
-    radiant_laurel_sprout-user \
-    radiant_laurel_sprout-userdebug \
-    radiant_laurel_sprout-eng
+    potato_laurel_sprout-user \
+    potato_laurel_sprout-userdebug \
+    potato_laurel_sprout-eng

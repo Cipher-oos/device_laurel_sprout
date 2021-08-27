@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The radiant-X Project
+# Copyright (C) 2021 The potato-X Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common radiant-X stuff
-$(call inherit-product, vendor/radiant/config/common_full_phone.mk)
+# Inherit some common potato-X stuff
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -28,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := radiant_laurel_sprout
+PRODUCT_NAME := potato_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -43,20 +43,20 @@ SKIP_ABI_CHECKS := true
 WITH_FOD_ANIMATIONS := true
 
 # Props
-RADIANT_MAINTAINER := Mahmoud_Suleiman
-RADIANT_BUILD_TYPE := OFFICIAL
-RADIANT_SUPPORT_URL := https://t.me/nezuko_A3
-RADIANT_DONATE_URL := https://paypal.me/mmsuleiman
+POTATO_MAINTAINER := Mahmoud_Suleiman
+POTATO_BUILD_TYPE := UNOFFICIAL
+POTATO_SUPPORT_URL := https://t.me/nezuko_A3
+POTATO_DONATE_URL := https://paypal.me/mmsuleiman
 BUILD_USERNAME := Cipher
-BUILD_HOSTNAME := radiant
+BUILD_HOSTNAME := potato
 
-#TARGET_INCLUDE_STOCK_ARCORE  := true
+TARGET_INCLUDE_STOCK_ARCORE  := true
 TARGET_BOOT_ANIMATION_RES := 720
-#TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_GAPPS  := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_GAPPS  := true
 
 
-BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="laurel_sprout-user 10 QKQ1.190910.002 V11.0.15.0.QFQMIXM release-keys" \
