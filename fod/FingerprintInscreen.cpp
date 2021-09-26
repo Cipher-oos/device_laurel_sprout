@@ -23,7 +23,6 @@
 #include <cmath>
 
 #define FINGERPRINT_ERROR_VENDOR 8
-#define FINGERPRINT_ACQUIRED_VENDOR 6
 
 #define COMMAND_NIT 10
 #define PARAM_NIT_FOD 3
@@ -104,37 +103,8 @@ Return<void> FingerprintInscreen::onHideFODView() {
 }
 
 Return<bool> FingerprintInscreen::handleAcquired(int32_t acquiredInfo, int32_t vendorCode) {
-    bool handled = false;
-
-    std::lock_guard<std::mutex> _lock(mCallbackLock);
-    if (mCallback == nullptr) {
-        return false;
-    }
-
-    switch (acquiredInfo) {
-        case FINGERPRINT_ACQUIRED_VENDOR:
-            if (vendorCode == 22) {
-                Return<void> ret = mCallback->onFingerDown();
-                if (!ret.isOk()) {
-                    LOG(ERROR) << "FingerDown() error: " << ret.description();
-                }
-                handled = true;
-            }
-
-            if (vendorCode == 23) {
-                Return<void> ret = mCallback->onFingerUp();
-                if (!ret.isOk()) {
-                    LOG(ERROR) << "FingerUp() error: " << ret.description();
-                }
-                handled = true;
-            }
-            break;
-    }
-
-    if (!handled)
-        LOG(ERROR) << "acquiredInfo: " << acquiredInfo << ", vendorCode: " << vendorCode;
-
-    return handled;
+    LOG(ERROR) << "acquiredInfo: " << acquiredInfo << ", vendorCode: " << vendorCode << "\n";
+    return false;
 }
 
 Return<bool> FingerprintInscreen::handleError(int32_t error, int32_t vendorCode) {
@@ -163,11 +133,7 @@ Return<bool> FingerprintInscreen::shouldBoostBrightness() {
 }
 
 Return<void> FingerprintInscreen::setCallback(const sp<::vendor::lineage::biometrics::fingerprint::inscreen::V1_0::IFingerprintInscreenCallback>& callback) {
-    {
-        std::lock_guard<std::mutex> _lock(mCallbackLock);
-        mCallback = callback;
-    }
-
+    (void) callback;
     return Void();
 }
 
