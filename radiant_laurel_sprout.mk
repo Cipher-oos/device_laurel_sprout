@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common AEX stuff
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common Radiant stuff
+$(call inherit-product, vendor/radiant/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -29,7 +29,7 @@ PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_laurel_sprout
+PRODUCT_NAME := radiant_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -47,3 +47,7 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_HAS_FOD := true
 TARGET_SUPPORTS_QUICK_TAP := true
+
+# Radiant stuff
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.specs.cpu=SD665
